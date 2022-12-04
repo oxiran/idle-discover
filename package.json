@@ -1,0 +1,43 @@
+{
+  "name": "idle-discover",
+  "version": "1.0.0",
+  "description": "A plugin which can discover idle state of website",
+  "main": "dist/idle-discover.js",
+  "module": "dist/idle-discover.esm.js",
+  "unpkg": "dist/idle-discover.js",
+  "types": "dist/types/idle-discover.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "idle",
+    "idle-discover",
+    "idle-detector",
+    "website",
+    "idle-timeout"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "@oxiran/eslint-config-ts": "^1.0.0",
+    "@oxiran/tsconfig": "^1.0.0",
+    "eslint": "^8.29.0"
+  },
+  "author": {
+    "name": "oxiran",
+    "email": "oxiran.liao@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxiran/idle-discover.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oxiran/idle-discover/issues"
+  },
+  "homepage": "https://github.com/oxiran/idle-discover",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

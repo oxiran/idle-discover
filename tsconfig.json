@@ -1,0 +1,4 @@
+{
+  "extends": "@oxiran/tsconfig",
+  "include": ["src/**/*.ts"]
+}
