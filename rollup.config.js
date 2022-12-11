@@ -30,7 +30,7 @@ module.exports = {
     {
       name: pkgName,
       format: 'es',
-      file: `dist/ut${name}ils.esm.js`,
+      file: `dist/${name}.esm.js`,
       banner,
     },
     {
