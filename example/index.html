@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idle Discover Example</title>
+  <script src="/idle-discover.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .state {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    .tools {
+      margin-top: 80px;
+    }
+
+    .container button {
+      border: none;
+      padding: 8px 24px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span class="state">active</span>
+    <div class="tools">
+      <button onclick="handleDestory()">Destory</button>
+    </div>
+  </div>
+  <div>sdd</div>
+  <script>
+    const idle = new IdleDiscover({
+      timeout: 5000,
+    });
+
+    idle.listen(() => {
+      console.log('It is idle!');
+    });
+
+    function handleDestory() {
+      idle.destory();
+    }
+  </script>
+</body>
+
+</html>
