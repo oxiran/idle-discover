@@ -1,5 +1,8 @@
 const terser = require('@rollup/plugin-terser');
 const typescript = require('@rollup/plugin-typescript');
+const serve = require('rollup-plugin-serve');
+const livereload = require('rollup-plugin-livereload');
+const nodeResolve = require('@rollup/plugin-node-resolve');
 const { name, author, description } = require('./package.json');
 
 const pkgName = 'IdleDiscover';
@@ -47,6 +50,19 @@ module.exports = {
         target: 'es5',
       },
       declaration: false,
+      sourceMap: false,
     }),
+
+    nodeResolve(),
+
+    process.env.NODE_ENV === 'development' ? serve({
+      port: 9527,
+      open: true,
+      openPage: '/index.html',
+      verbose: true,
+      contentBase: ['example', 'dist'],
+    }) : null,
+
+    process.env.NODE_ENV === 'development' ? livereload() : null,
   ],
 };
