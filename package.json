@@ -21,6 +21,7 @@
     "build:main": "rollup --config rollup.config.js",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir ./dist/types",
     "build": "npm run build:main && npm run build:types",
+    "serve": "rollup --environment NODE_ENV:development --config rollup.config.js --watch",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -28,11 +29,14 @@
     "@oxiran/commitlint-config": "^1.0.0",
     "@oxiran/eslint-config-ts": "^1.0.0",
     "@oxiran/tsconfig": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.2.0",
     "@rollup/plugin-typescript": "^10.0.1",
     "eslint": "^8.29.0",
     "husky": "^8.0.2",
     "rollup": "^3.6.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.2",
     "typescript": "^4.9.3"
   },
   "author": {
@@ -51,5 +55,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@oxiran/utils": "^1.2.0"
   }
 }
