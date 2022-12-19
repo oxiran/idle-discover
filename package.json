@@ -24,6 +24,9 @@
     "serve": "rollup --environment NODE_ENV:development --config rollup.config.js --watch",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "@oxiran/utils": "^1.2.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@oxiran/commitlint-config": "^1.0.0",
@@ -55,8 +58,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "dependencies": {
-    "@oxiran/utils": "^1.2.0"
   }
 }
